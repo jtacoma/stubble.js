@@ -12,11 +12,18 @@ function stubble(arg) {
   arg = arg || {};
   if (typeof this !== 'undefined' && this !== null && !arg.target)
     arg.target = this;
-  for (var name in arg.source)
+  for (var sourceName in arg.source)
   {
-    var index_name = name.split('_', 1)[0]
-    var index = arg.target[index_name];
-    arg.target[name] = arg.source[name][index];
+    var parts = sourceName.split('_');
+    var indexName = parts[0];
+    var targetName = sourceName;
+    if (arg.culture && parts.length > 2)
+    {
+      if (parts[2] != arg.culture) continue;
+      targetName = parts[0] + '_' + parts[1];
+    }
+    var index = arg.target[indexName];
+    arg.target[targetName] = arg.source[sourceName][index];
   }
   return arg.target;
 }
