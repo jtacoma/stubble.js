@@ -9,13 +9,21 @@
  */
 
 function stubble(arg) {
+  arg = arg || {};
+  if (typeof this !== 'undefined' && this !== null && !arg.target)
+    arg.target = this;
+  for (var sourceName in arg.source)
+  {
+    var parts = sourceName.split('_');
+    var indexName = parts[0];
+    var targetName = sourceName;
+    if (arg.culture && parts.length > 2)
+    {
+      if (parts[2] != arg.culture) continue;
+      targetName = parts[0] + '_' + parts[1];
+    }
+    var index = arg.target[indexName];
+    arg.target[targetName] = arg.source[sourceName][index];
+  }
+  return arg.target;
 }
-
-stubble.version_ = {
-  major: 0,
-  minor: 0,
-  build: 1,
-};
-
-if (typeof exports !== 'undefined' && exports !== null)
-  exports.stubble = stubble;
