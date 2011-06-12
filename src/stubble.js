@@ -9,13 +9,14 @@
  */
 
 function stubble(arg) {
+  arg = arg || {};
+  if (typeof this !== 'undefined' && this !== null && !arg.target)
+    arg.target = this;
+  for (var name in arg.source)
+  {
+    var index_name = name.split('_', 1)[0]
+    var index = arg.target[index_name];
+    arg.target[name] = arg.source[name][index];
+  }
+  return arg.target;
 }
-
-stubble.version_ = {
-  major: 0,
-  minor: 0,
-  build: 1,
-};
-
-if (typeof exports !== 'undefined' && exports !== null)
-  exports.stubble = stubble;
