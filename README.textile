@@ -1,0 +1,21 @@
+h1. stubble.js
+
+*stubble.js* was conceived in need for a way to late-bind localized strings to properties of an object, prior to pretty-printing with "mustache.js":https://github.com/janl/mustache.js.  It may be useful for other purposes.
+
+h2. Building
+
+On *nix:
+
+bc. cat src/* > stubble.js
+
+or at a DOS prompt:
+
+bc. type src\* > stubble.js
+
+h2. Developing
+
+@stubble.js@ is under @src@.  Jasmine specifications are under @spec@.
+
+Collaborators welcome.  Feel free to fork the github project and send pull requests.
+
+Copyright (c) 2011 Joshua Tacoma.  This software is licensed under the MIT License.
