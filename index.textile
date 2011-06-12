@@ -1,0 +1,10 @@
+---
+layout: default
+title: stubble.js
+---
+
+h1. stubble.js
+
+This is a demonstration of the <a href="https://github.com/jtacoma/stubble.js">stubble.js</a> project.
+
+* "stubble-0.0.1.js":stubble-0.0.1.js
