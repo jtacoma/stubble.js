@@ -1,5 +1,5 @@
 /*
- * stubble.js v0.0.1
+ * stubble.js v0.0.2
  * http://yellowseed.org/stubble.js/
  *
  * Copyright 2011, Joshua Tacoma
