@@ -2,6 +2,18 @@ h1. stubble.js
 
 *stubble.js* was conceived in need for a way to late-bind localized strings to properties of an object, prior to pretty-printing with "mustache.js":https://github.com/janl/mustache.js.  It may be useful for other purposes.
 
+h2. Usage
+
+@stubble()@ will copy property-value pairs from a @source@ to a @target@ with some mapping and localization.  In the code below, we setup a source and a target, then copy a localized property-value pair into the target:
+
+bc. var localizedStrings = {
+  dayOfWeek_name_en: 'Sunday Monday Tuesday etc.'.split(),
+};
+var datum = { dayOfWeek: 1 };
+datum.stubble({source:localizedStrings, culture:'en'});
+
+After this, @datum.dayOfWeek_name == 'Monday'@.
+
 h2. Building
 
 On *nix:
