@@ -29,7 +29,7 @@ describe("stubble", function() {
       source: {
         month_name_en: {1: 'January', 2: 'February'},
       },
-      culture: 'en',
+      language: 'en',
     }).month_name).toEqual('January');
   });
 
@@ -39,7 +39,7 @@ describe("stubble", function() {
       source: {
         month_name: {1: 'January', 2: 'February'},
       },
-      culture: 'en',
+      language: 'en',
     }).month_name).toEqual('January');
   });
 
@@ -49,7 +49,7 @@ describe("stubble", function() {
       source: {
         month_name_en: {1: 'January', 2: 'February'},
       },
-      culture: 'en-CA',
+      language: 'en-CA',
     }).month_name).toEqual('January');
   });
 

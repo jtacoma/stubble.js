@@ -10,7 +10,7 @@ bc. var localizedStrings = {
   dayOfWeek_name_en: 'Sunday Monday Tuesday etc.'.split(),
 };
 var datum = { dayOfWeek: 1 };
-datum.stubble({source:localizedStrings, culture:'en'});
+datum.stubble({source:localizedStrings, language:'en'});
 
 After this, @datum.dayOfWeek_name == 'Monday'@.
 
