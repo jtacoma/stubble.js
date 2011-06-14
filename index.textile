@@ -5,6 +5,14 @@ title: stubble.js
 
 h1. stubble.js
 
-This is a demonstration of the <a href="https://github.com/jtacoma/stubble.js">stubble.js</a> project.
+This is the future location of a demonstration of the <a href="https://github.com/jtacoma/stubble.js">stubble.js</a> project.
+
+h2. Current
+
+* "stubble-0.0.2.js":stubble-0.0.2.js
+
+bc. <script src="http://yellowseed.org/stubble.js/stubble-0.0.2.js" />
+
+h2. Previous Versions
 
 * "stubble-0.0.1.js":stubble-0.0.1.js
